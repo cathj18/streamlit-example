@@ -5,3 +5,4 @@ sounddevice
 librosa
 libportaudio2
 libasound-dev
+pyaudio
