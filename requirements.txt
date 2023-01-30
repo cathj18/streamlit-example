@@ -4,3 +4,4 @@ streamlit
 sounddevice
 librosa
 PyAudio==0.2.11
+protobuf==3.11.3
