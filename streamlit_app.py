@@ -14,7 +14,21 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
+import sounddevice as sd
+from scipy.io.wavfile import write
 
+fs = 16000  # Sample rate
+seconds = 10  # Duration of recording
+
+if st.button('Record'):
+  with st.spinner(f'Recording for 10 seconds ....'):
+      try:
+        myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
+        sd.wait()  # Wait until recording is finished
+        write("audio1.wav", fs, myrecording)  # Save as WAV file
+      except:
+          pass
+  st.success("Recording completed")
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
