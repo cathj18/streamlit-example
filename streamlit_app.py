@@ -3,7 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-from src.sound import sound
+from audio_recorder_streamlit import audio_recorder
 
 """
 # Welcome to Streamlit!
