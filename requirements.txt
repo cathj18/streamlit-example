@@ -3,3 +3,4 @@ pandas
 streamlit
 sounddevice
 librosa
+audio-recorder-streamlit
